@@ -79,13 +79,6 @@ class SignUpForm extends Component {
 
             <br />
 
-            <label>
-              remember me
-              <input type="checkbox" />
-            </label>
-
-            <br />
-
             <input type="submit" value="sign up" />
 
           </form>

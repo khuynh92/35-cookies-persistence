@@ -47,13 +47,6 @@ export default class LogInForm extends Component {
 
           <br />
 
-          <label>
-            remember me
-            <input type="checkbox" />
-          </label>
-
-          <br />
-
           <input type="submit" value="log in"/>
 
         </form>
