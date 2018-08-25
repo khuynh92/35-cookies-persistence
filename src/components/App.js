@@ -5,6 +5,7 @@ import store from '../lib/store.js';
 import Home from './home/Home.js';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Dashbaord from './Dashboard/dashboard.js';
+import SignUpForm from './sign-up/SignUpForm.js';
 
 export default class App extends Component {
   render() {
@@ -13,7 +14,8 @@ export default class App extends Component {
         <BrowserRouter>
           <React.Fragment>
             <Route exact path='/' component={Home} />
-            <Route exact path='/dashboard' component={Dashbaord}/>
+            <Route path='/dashboard' component={Dashbaord}/>
+            <Route path='/signup' component={SignUpForm}/>
           </React.Fragment>
         </BrowserRouter>
       </Provider>

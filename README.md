@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.com/khuynh92/34-asynchronous-actions.svg?branch=master)](https://travis-ci.com/khuynh92/34-asynchronous-actions)
+[![Build Status](https://travis-ci.com/khuynh92/35-cookies-persistence.svg?branch=master)](https://travis-ci.com/khuynh92/35-cookies-persistence)
 
-heroku: http://khoa-34-asynchronous-actions.herokuapp.com  
-PR: https://github.com/khuynh92/33-redux-middleware/pull/1  
+heroku: http://khoa-35-cookies-persistence.herokuapp.com  
+PR: https://github.com/khuynh92/35-cookies-persistence/pull/1  
 Travis: https://travis-ci.com/khuynh92/33-redux-middleware    
 
-# LAB 34-asynchronous-actions
+# LAB 35-cookies-persistence
 
 ## Configuration
 

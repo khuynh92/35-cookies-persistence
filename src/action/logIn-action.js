@@ -13,6 +13,11 @@ export const logOut = () => ({
   payload: false,
 });
 
+export const handleError = (err) => ({
+  type: 'HANDLE_ERROR',
+  payload: err,
+});
+
 
 //thunkers
 
@@ -22,18 +27,31 @@ export const logInThunk = (user) => {
       .auth(user.username, user.password)
       .then(response => {
         localStorage.token = JSON.stringify(response.text);
-        dispatch(logIn(response.text));
-        console.log('logged in!');
+        dispatch(logIn());
       })
-      .catch(err => {
-        alert('invalid login/password');
+      .catch((err) => {
+        dispatch(handleError(err));
       });
   };
-}
+};
 
 export const logOutThunk = () => {
   return dispatch => {
     localStorage.removeItem('token');
     dispatch(logOut());
-  }
-}
+  };
+};
+
+export const signUpThunk = (newUser) => {
+  return dispatch => {
+    superagent.post(`${process.env.API_URL}/signup`)
+      .send(newUser)
+      .then(response => {
+        localStorage.token = JSON.stringify(response.text);
+        dispatch(logIn());
+      })
+      .catch(err => {
+        dispatch(handleError(err));
+      });
+  };
+};

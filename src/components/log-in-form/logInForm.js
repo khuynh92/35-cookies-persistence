@@ -54,7 +54,7 @@ export default class LogInForm extends Component {
 
           <br />
 
-          <input type="submit" />
+          <input type="submit" value="log in"/>
 
         </form>
       </Fragment>

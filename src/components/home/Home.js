@@ -1,16 +1,12 @@
 import React, { Component, Fragment } from 'react';
 
-import {  Redirect } from 'react-router-dom';
+import {  Redirect, Link } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 
-import { logInThunk, logIn } from '../../action/logIn-action.js';
+import { logInThunk, logIn , signUpThunk} from '../../action/logIn-action.js';
 
-import LogInForm from '../log-in-form/logInForm.js';
-
-
-
-
+import LogInForm from '../log-in-form/LogInForm.js';
 
 class Home extends Component {
   componentDidMount() {
@@ -18,11 +14,12 @@ class Home extends Component {
       this.props.logIn();
     }
   }
+  
   render() {
-    console.log('are you logged in? : ', this.props.isLoggedIn);
     return (
       <Fragment>
         {!this.props.isLoggedIn ? <LogInForm logIn={this.props.logInThunk} /> : <Redirect to={{pathname: '/dashboard'}}/>}
+        <p>Don't have an account? <Link to='/signup'>Create an Account</Link></p>
       </Fragment>
     );
   }
@@ -33,6 +30,8 @@ const mapStateToProps = state => ({ isLoggedIn: state.isLoggedIn });
 const mapDispatchToProps = dispatch => ({
   logInThunk: user => dispatch(logInThunk(user)),
   logIn: user => dispatch(logIn(user)),
+  signUpThunk: user => dispatch(signUpThunk(user)),
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
