@@ -4,7 +4,7 @@ import store from '../lib/store.js';
 
 import Home from './home/Home.js';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Dashbaord from './Dashboard/dashboard.js';
+import Dashboard from './dashboard/Dashboard.js';
 import SignUpForm from './sign-up/SignUpForm.js';
 
 export default class App extends Component {
@@ -14,7 +14,7 @@ export default class App extends Component {
         <BrowserRouter>
           <React.Fragment>
             <Route exact path='/' component={Home} />
-            <Route path='/dashboard' component={Dashbaord}/>
+            <Route path='/dashboard' component={Dashboard}/>
             <Route path='/signup' component={SignUpForm}/>
           </React.Fragment>
         </BrowserRouter>
