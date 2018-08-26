@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-export default class LogInForm extends Component {
+export class LogInForm extends Component {
 
   state = {
     username: '',
