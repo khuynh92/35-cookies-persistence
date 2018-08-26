@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import {  Redirect, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logInThunk, logIn , signUpThunk} from '../../action/logIn-action.js';
-import { LogInForm } from '../log-in-form/LogInForm.js';
+import LogInForm from '../login/LogInForm.js';
 class Home extends Component {
   componentDidMount() {
     if(localStorage && localStorage.token) {
